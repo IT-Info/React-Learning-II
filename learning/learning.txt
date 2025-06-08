@@ -1,0 +1,21 @@
+to creating folder structure like this
+
+> npx create-react-app@5 learning
+
+you can create app using vite also, 
+that is fast but does not contains 
+eslint (code errors, best practices), 
+jest (for testing),
+
+you have to manually setup these modules
+
+check package.json to view installed modules
+
+
+you can change view by adding html tags in App.js
+
+return (
+    <your html>
+);
+
+NOTE : check warning log is defined but never used, given by plugin (eslint).
