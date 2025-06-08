@@ -5,11 +5,15 @@ Components, Props, and JSX
 
 index.js : is the main file, webpack(module bundler) expects entry point, (file named with index.js)
 
-Components : are the building blocks
+Components : 
+> are the building blocks
+> contains its own data logic and appearance (how it looks and works)
 
 Component : is a function, 
 1. name starts with CAPITAL LETTER.
-2. return html to be render on web page.
+2. return component to be render on web page.
+3. can be nested
+5. must return only one component. 
 
 index.js
 ---------
@@ -38,3 +42,34 @@ wrapping <App/> component into <React.StrictMode> <App/> </React.StrictMode>
     <App/> 
 </React.StrictMode>
 
+----------------
+Step 2.1
+Create a 'toy' component and reuse it in main component.
+
+<h1> First App2</h1> <toy />
+ERROR : You can not return more then one component.
+
+NOTE : Only one component can be returned.
+You should wrap inside another compoent and return that component.
+
+even after every correction 
+page would not display 'toy' component because it's not starts with Capital Letter
+rename 'toy' with 'Toy'
+
+
+You can create nested components 
+function App() {
+  function Toy() {
+    return <div>toy</div>;
+  }
+  return (
+    <div>
+      <h1> First App2</h1>
+      <Toy />
+      <Toy />
+    </div>
+  );
+}
+
+NOTE : it's not a best practice.
+Create components at global level so that it can reuse.
