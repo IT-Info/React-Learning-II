@@ -73,3 +73,38 @@ function App() {
 
 NOTE : it's not a best practice.
 Create components at global level so that it can reuse.
+
+
+So Till Now we have written JSX 
+Now We should know what is JSX ?
+what its
+Component (data, logic, appearance)
+
+Declarative syntax to describe what components look like and how they work
+components must return a block of jsx
+
+we can write html elements, javascript, HTML also other components
+this is just because of jsx, Jsx is extention of javascript
+
+Q. if react is javascript framework how its understand html looking code ?
+A. Jsx is extention of javascript, jsx converted to React code using babel,
+automatically include in create-react-app. 
+
+<h1> Hello </h1>
+converted to 
+React.createElement("h1",null,"Hello React");
+converted to 
+HTML in browser.
+
+so we could use React without JSX.
+
+
+JSX is declarative ?
+
+imperative : how to do things written in javascript manually
+
+declarative : how ui should look like baed on current data.
+
+React is an abstraction away from DOM, we never touch the DOM
+We think of the UI as a reflection of the current data.
+ 
