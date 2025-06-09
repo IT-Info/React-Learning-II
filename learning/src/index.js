@@ -7,15 +7,27 @@ function App() {
   // }
   return (
     <div>
-      <h1> First App2</h1>
-      <Toy />
-      <Toy />
+      <Header />
+      <Menu />
     </div>
   );
 }
 
+const Header = () => {
+  return <h1>Toy Shop Opened {new Date().toLocaleTimeString()}</h1>;
+};
+
 function Toy() {
   return <div>toy</div>;
+}
+
+function Menu() {
+  return (
+    <div>
+      <Toy />
+      <Toy />
+    </div>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

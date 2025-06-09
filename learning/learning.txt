@@ -108,3 +108,20 @@ declarative : how ui should look like baed on current data.
 React is an abstraction away from DOM, we never touch the DOM
 We think of the UI as a reflection of the current data.
  
+ Step 2.2 ------
+
+ Page displaying more toys with name, price.
+
+ we can use nested components with the help of jsx.
+
+ <Menu>
+    <Toy/>
+    <Toy/>
+ </Menu>
+
+Seperation of concerns
+html, css, javascript seperated in different files, 
+but in component, js, css and html together in one file.
+here is logical seperation of concerns.
+
+
