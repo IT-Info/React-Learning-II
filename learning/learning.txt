@@ -203,5 +203,6 @@ function Component(){
 
  this is why easy to debug, as we have controler over the data.
 
- 
+Step 3.3  Project ------
+ you should do one project that uses props, styling
 
