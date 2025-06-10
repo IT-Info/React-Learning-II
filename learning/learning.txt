@@ -233,6 +233,30 @@ CSS : {{<style props in json with camelCase properties >}}
 comments need to be in {} (because they are JS)
 
 -------------------------------------------------------
+46. Step - 4.1 : Render List
+
+We will create array of toy properties and render toys based on it.
+
+we can pass props or an object of array
+
+const list = [
+    {
+        name:"Duck",
+        price: 100,
+        qty: 10
+    },
+    {
+        name:"Train",
+        price: 2000,
+        qty: 5
+    }
+]
+
+{ 
+  toys.map(toy => {
+    return <Toy name={toy.name} />
+  }) 
+}
 
 
 

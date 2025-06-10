@@ -42,11 +42,27 @@ function Toy(props) {
   );
 }
 
+const toys = [
+  {
+    name: "Duck",
+    price: 100,
+    qty: 10,
+  },
+  {
+    name: "Train",
+    price: 2000,
+    qty: 5,
+  },
+];
+
 function Menu() {
   return (
     <div className="menu">
-      <Toy name="Duck" price="12" qty={12} />
-      <Toy name="Spiderman" price="120" qty={15} />
+      {/* <Toy name="Duck" price="12" qty={12} />
+      <Toy name="Spiderman" price="120" qty={15} /> */}
+      {toys.map((toy) => {
+        return <Toy name={toy.name} price={toy.price} qty={toy.qty} />;
+      })}
     </div>
   );
 }
