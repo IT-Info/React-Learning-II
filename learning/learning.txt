@@ -320,6 +320,35 @@ so we can use multiple return statements,
 to view conditionally based on conditions but only in component not in jsx '{}'
 
 
+----------------
+51 Step 6 : Desctructing props
+
+we can destructure props into different variables.
+
+this is javascript's concept
+You can directly create a variable and get the value from json object.
+but in one condition: property name in json must match the name of variable
+e.g 
+let {name} = {name:"train", price:100}
+name is variable contains "train" and can be used anywhere in context.
+console.log(name);
+
+similarly for arrays 
+let [a,b,c] = [1,2,4];
+
+console.log(a+" : "+b+" : "+c)
+output: 
+1 : 2 : 4
+
+
+
+
+
+
+
+
+
+
 
 
 

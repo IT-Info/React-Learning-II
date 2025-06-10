@@ -23,15 +23,8 @@ const Header = () => {
   );
 };
 
-function Toy(props) {
-  console.log(props);
-  // inline-css with variables
+function Toy({ toy }) {
   const styles = { fontSize: "20px", fontFamily: "arial" };
-
-  //   props.name = "hello"; // ERROR in console if you change property
-  //Uncaught TypeError: Cannot assign to read only property 'name' of object '#<Object>'
-
-  const toy = props.toy;
   return (
     <div style={styles}>
       <h3>{toy.name}</h3>
@@ -43,7 +36,18 @@ function Toy(props) {
   );
 }
 
-const toys = [];
+const toys = [
+  {
+    name: "Duck",
+    price: 100,
+    qty: 10,
+  },
+  {
+    name: "Train",
+    price: 2000,
+    qty: 5,
+  },
+];
 
 function Menu() {
   if (toys.length === 0) {
