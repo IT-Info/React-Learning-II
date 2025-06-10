@@ -305,3 +305,22 @@ React does not display true/false
 NOTE : use boolean && display components.
 
 Why React render 0 if we use [].length && . . .
+
+--------------
+Step 5.2
+
+conditional rendering with ternary operator
+condition ? if true expression : else expression
+
+Note: you can not use if/else for rendering conditionally.
+
+Q: why we can not use if/else ?
+
+so we can use multiple return statements, 
+to view conditionally based on conditions but only in component not in jsx '{}'
+
+
+
+
+
+
