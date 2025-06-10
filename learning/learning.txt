@@ -303,3 +303,5 @@ but if expression returns boolean (true/false) then react will not render
 React does not display true/false
 
 NOTE : use boolean && display components.
+
+Why React render 0 if we use [].length && . . .
