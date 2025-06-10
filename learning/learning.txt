@@ -283,3 +283,6 @@ function Toy(props){
     const toy = props.toy;
     return <h1>toy.name</h1> // easier to use if property name changed then you have to change only one place, that's a basics of programming nothing related to React.
 }
+
+Question : can we use forEach(...) instead of map(...)
+Ans: No, because map returns the list that is required for jsx, but forEach does not.
