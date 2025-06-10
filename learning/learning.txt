@@ -286,3 +286,20 @@ function Toy(props){
 
 Question : can we use forEach(...) instead of map(...)
 Ans: No, because map returns the list that is required for jsx, but forEach does not.
+
+---------------------------------------------------
+Step 5.1
+
+Conditional Rendering
+
+display components if they should,
+if empty list(toys) then nothing should be render on page.
+you can do so by using && operator
+
+toys.length && toys.map(...);
+this will render 0 on page
+
+but if expression returns boolean (true/false) then react will not render
+React does not display true/false
+
+NOTE : use boolean && display components.
