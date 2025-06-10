@@ -206,3 +206,33 @@ function Component(){
 Step 3.3  Project ------
  you should do one project that uses props, styling
 
+---------------------------------------------------
+45. JSX Rules
+
+ - JSX works like HTML but we enter javascript mode by using {}
+  {} must return anything.
+ - place javascript expression inside {}, ref variables, create array object, [].map, ternaryoperator anything.
+ - statements are not allowed (if/else, for, switch), only statements that return something. 
+ - JSX produces a Javascript expression
+jsx        :  <h1>hello</h1>
+javascript :  React.createElement("h1",null,"hello");
+
+ because jsx produced expression, so it can be used anywhere.
+ e.g. if/else, assign to a variable, pass to a functions
+
+ - jsx can only have one root element, 
+if you need more you should use <React.Fragment> or <>
+
+Difference
+JSX         |   HTML    
+className   |   class
+htmlFor     |   for
+all event handlers other than properties need to be camelCased:
+onClick, onBlur
+CSS : {{<style props in json with camelCase properties >}}
+comments need to be in {} (because they are JS)
+
+-------------------------------------------------------
+
+
+
