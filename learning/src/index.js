@@ -28,6 +28,9 @@ function Toy(props) {
   // inline-css with variables
   const styles = { fontSize: "20px", fontFamily: "arial" };
 
+  //   props.name = "hello"; // ERROR in console if you change property
+  //Uncaught TypeError: Cannot assign to read only property 'name' of object '#<Object>'
+
   return (
     <div style={styles}>
       <h3>{props.name}</h3>

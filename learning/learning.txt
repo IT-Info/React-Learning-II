@@ -149,7 +149,7 @@ external styling -
 
 -----------------------------------------------------------------------
 
-Step 3  Props
+42. Step 3  Props
 --------------
 is used to pass data from parent to child component.
 
@@ -162,8 +162,46 @@ function Toy(props){
     . . .
 }
 
+43. Step 3.2  
 
+ - props are json object coming from parent component
+ - is used to configure components.
+ - with props, parent component control how child component look and work
+ - anything can be passed as props: single value, arrays, objects, functions even other components.
 
+In the component props used to look and work
+in other words
+props coming from parent so can only be updated by the parent component.
 
+ - props are read-only, they are immutable, This is one of React's strict rules.
 
+NOTE : if you want to change data by component's logic then we use state.
+state is internal data can be updated by compoennt's logic.
+
+ - if you need to mutate props, you actually need state.
+
+WHY ? 
+props is json object created by outside if you have reference of an object 
+and change that object's properties then actual object is changed so it is
+changed for parent also.
+so components have to be pure functions in terms of props and state
+
+So Component should never mutate any data that is outside of function's scope
+e.g. : should not do this.
+let x = 7;
+function Component(){
+    x = 2;
+    return <h1>{x}</h1>;
+}
+
+ - One-way data flow.
+
+ It's only pass from parent to child.
+
+ Data can flow from parent to children not opposite way.
+ but angular has two-way data flow.
+
+ this is why easy to debug, as we have controler over the data.
+
+ 
 
