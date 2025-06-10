@@ -258,5 +258,11 @@ const list = [
   }) 
 }
 
+you can see and error on console :
+Each child in a list should have a unique "key" prop.
+React needs to uniquely identify every component 
+solution: pass 'key' prop to a component
+
+and different use of map in rendering list, basically that's the property of map function not jsx (React).
 
 
