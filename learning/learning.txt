@@ -265,4 +265,9 @@ solution: pass 'key' prop to a component
 
 and different use of map in rendering list, basically that's the property of map function not jsx (React).
 
-
+pass json object as a prop
+{ 
+  toys.map(toy => {
+    return <Toy toy={toy} />
+  }) 
+}

@@ -33,10 +33,10 @@ function Toy(props) {
 
   return (
     <div style={styles}>
-      <h3>{props.name}</h3>
+      <h3>{props.toy.name}</h3>
       <div>
-        <span>Price : {props.price}, </span>
-        <span>Quantity : {props.qty}</span>
+        <span>Price : {props.toy.price}, </span>
+        <span>Quantity : {props.toy.qty}</span>
       </div>
     </div>
   );
@@ -61,7 +61,7 @@ function Menu() {
       {/* <Toy name="Duck" price="12" qty={12} />
       <Toy name="Spiderman" price="120" qty={15} /> */}
       {toys.map((toy) => (
-        <Toy key={toy.name} name={toy.name} price={toy.price} qty={toy.qty} />
+        <Toy key={toy.name} toy={toy} />
       ))}
     </div>
   );
