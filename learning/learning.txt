@@ -125,3 +125,25 @@ but in component, js, css and html together in one file.
 here is logical seperation of concerns.
 
 
+----
+Step 2.3
+
+Styling in components
+
+inline styling - 
+    <component style={ json } />
+    json should contain camelcaseproperties
+    e.g.  
+    css : font-size, text-transform
+    jsx-json = fontSize, textTransform
+
+external styling - 
+    file.css - contains CSS
+
+    .container {
+        font-size : 10x;
+    }
+
+    import "./file.css"
+    <Component className='container'>
+

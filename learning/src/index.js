@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 function App() {
   // function Toy() {
@@ -14,16 +15,23 @@ function App() {
 }
 
 const Header = () => {
-  return <h1>Toy Shop Opened {new Date().toLocaleTimeString()}</h1>;
+  // inline-css
+  return (
+    <h1 style={{ color: "red", fontFamily: "arial" }}>
+      Toy Shop Opened {new Date().toLocaleTimeString()}
+    </h1>
+  );
 };
 
 function Toy() {
-  return <div>toy</div>;
+  // inline-css with variables
+  const styles = { fontSize: "20px", fontFamily: "arial" };
+  return <div style={styles}>toy</div>;
 }
 
 function Menu() {
   return (
-    <div>
+    <div className="menu">
       <Toy />
       <Toy />
     </div>
