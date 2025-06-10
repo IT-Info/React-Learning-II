@@ -340,7 +340,16 @@ console.log(a+" : "+b+" : "+c)
 output: 
 1 : 2 : 4
 
+----------------------------------------
+Step 7 : React Fragment
 
+JSX expression expects only one component but what if you want to render two components without any parent.
+then you can wrap both elements inside 
+'<> </>' :
+'<React.Fragement> </React.Fragement>
+
+if you remove <div> then jsx will give error
+you can check the dom tree in elements tab after changing <div> to <>
 
 
 

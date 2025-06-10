@@ -7,10 +7,10 @@ function App() {
   //   return <div>toy</div>;
   // }
   return (
-    <div>
+    <>
       <Header />
       <Menu />
-    </div>
+    </>
   );
 }
 
