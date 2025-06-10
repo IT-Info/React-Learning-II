@@ -265,9 +265,21 @@ solution: pass 'key' prop to a component
 
 and different use of map in rendering list, basically that's the property of map function not jsx (React).
 
+-- step 4.3 
 pass json object as a prop
+
 { 
   toys.map(toy => {
     return <Toy toy={toy} />
   }) 
+}
+
+and use like 'props.toy.name'
+
+-- Steo 4.4
+create variable that contains that object and use inside component would be easier
+
+function Toy(props){
+    const toy = props.toy;
+    return <h1>toy.name</h1> // easier to use if property name changed then you have to change only one place, that's a basics of programming nothing related to React.
 }

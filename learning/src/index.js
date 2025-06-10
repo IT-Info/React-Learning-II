@@ -31,12 +31,13 @@ function Toy(props) {
   //   props.name = "hello"; // ERROR in console if you change property
   //Uncaught TypeError: Cannot assign to read only property 'name' of object '#<Object>'
 
+  const toy = props.toy;
   return (
     <div style={styles}>
-      <h3>{props.toy.name}</h3>
+      <h3>{toy.name}</h3>
       <div>
-        <span>Price : {props.toy.price}, </span>
-        <span>Quantity : {props.toy.qty}</span>
+        <span>Price : {toy.price}, </span>
+        <span>Quantity : {toy.qty}</span>
       </div>
     </div>
   );
