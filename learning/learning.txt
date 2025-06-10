@@ -351,14 +351,13 @@ then you can wrap both elements inside
 if you remove <div> then jsx will give error
 you can check the dom tree in elements tab after changing <div> to <>
 
+-----------------------------------------
 
+Step 8 : change class names conditionally
 
+<div className='cssclass'>
+<div className={`cssclass ${true ? "newClass" : ""}`}
 
-
-
-
-
-
-
-
-
+{} : allows javascript expression
+`` : allows ${} expression in javascript
+both required expresison that return something.
