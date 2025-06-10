@@ -23,17 +23,27 @@ const Header = () => {
   );
 };
 
-function Toy() {
+function Toy(props) {
+  console.log(props);
   // inline-css with variables
   const styles = { fontSize: "20px", fontFamily: "arial" };
-  return <div style={styles}>toy</div>;
+
+  return (
+    <div style={styles}>
+      <h3>{props.name}</h3>
+      <div>
+        <span>Price : {props.price}, </span>
+        <span>Quantity : {props.qty}</span>
+      </div>
+    </div>
+  );
 }
 
 function Menu() {
   return (
     <div className="menu">
-      <Toy />
-      <Toy />
+      <Toy name="Duck" price="12" qty={12} />
+      <Toy name="Spiderman" price="120" qty={15} />
     </div>
   );
 }
