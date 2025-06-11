@@ -23,8 +23,17 @@ const Header = () => {
   );
 };
 
+function createAlert() {
+  alert("Clicked");
+}
+
 function Toy({ toy }) {
-  const styles = { fontSize: "20px", fontFamily: "arial" };
+  const styles = {
+    fontSize: "20px",
+    fontFamily: "arial",
+    borderBottom: "1px solid black",
+    padding: "5px 0px",
+  };
   return (
     <div style={styles}>
       <h3>{toy.name}</h3>
@@ -32,6 +41,17 @@ function Toy({ toy }) {
         <span>Price : {toy.price}, </span>
         <span>Quantity : {toy.qty}</span>
       </div>
+      <button
+        // execute on click of button
+        // onClick={() => {
+        //   createAlert();
+        // }}
+
+        // onClick={createAlert()} // immediately executed
+        onClick={createAlert}
+      >
+        click
+      </button>
     </div>
   );
 }

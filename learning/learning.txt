@@ -361,3 +361,34 @@ Step 8 : change class names conditionally
 {} : allows javascript expression
 `` : allows ${} expression in javascript
 both required expresison that return something.
+
+-----------------------------------------
+
+Step 9 : Events
+
+In JS imperative approach you can add events on addEventListener(...);
+also declarative onClick=(...)
+
+but in react only declarative approach is there.
+
+camelCaseEvents are supported in jsx
+
+onClick, onBlur, mouseEnter, ...
+
+function createAlert(){
+    alert('f');
+}
+
+{() => { jsFunction call}} // callback function
+e.g. {() => createAlert()};
+
+{jsFunction} 
+e.g. {createAlert}
+
+{jsFunction()}; // this will immediate call function when script will load.
+e.g. {createAlert()};
+
+
+
+
+
