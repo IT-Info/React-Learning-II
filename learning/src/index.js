@@ -24,10 +24,11 @@ const Header = () => {
 };
 
 function createAlert() {
-  alert("Clicked");
+  Toy({ toy: { name: "tt", price: "price", qty: 10 } });
 }
 
 function Toy({ toy }) {
+  console.log(toy);
   const styles = {
     fontSize: "20px",
     fontFamily: "arial",

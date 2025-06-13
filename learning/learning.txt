@@ -388,7 +388,24 @@ e.g. {createAlert}
 {jsFunction()}; // this will immediate call function when script will load.
 e.g. {createAlert()};
 
+-----------------------------------------
 
+Step 10 : State
 
+Q. What is State ?
+A. We learn't how to pass data into a component.
+based on that component display.
+what if component needs to store its own data ?
+also if component needs to change based on some event
+there state comes in picture.
 
+You can not change in react without doing manipulation in DOM which is not good practice.
+
+StateVariable/piece of state is a single variable in a component, not entire state of component.
+
+Q. What it does ?
+- Persist local variables between renders.
+- trigger's react to re-render the component 
+
+Q. How it works ?
 
