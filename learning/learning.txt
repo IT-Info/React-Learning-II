@@ -435,3 +435,13 @@ test.name = "Babbar";
 then UI will updated, but this is not best practice & not recommended by react
 
 Q. Why this time react will know the changes and updates UI ?
+A. ?
+
+How state works in React,
+we do not change DOM directly, because React is declarative.
+view is updated by re-rendering the component, and in re-rendering state will preserved in component.
+
+React calls the component function again and UI re-rendered.
+
+React Developer Tools
+Dev tools > components > you can see exact components defined in code and change their state
