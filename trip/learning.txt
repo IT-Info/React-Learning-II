@@ -34,3 +34,12 @@ We need to handle 'x' button so that element should remove in the list.
 Creating onRemoveItem and pass to ItemList then Pass to Item component.
 onClick of 'x' button function would call and pass its id to remove
 
+------
+State-project1.5 
+we want to highlight the component on click on it.
+for this we should create a state in a component and update ui using setState()
+
+but state 'itemlist' does not know which item is highlighted, If we want so,
+we should add property in parent state 'itemlist' and change onclick of component's div,
+using the component
+

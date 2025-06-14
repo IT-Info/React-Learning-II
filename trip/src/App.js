@@ -92,9 +92,21 @@ function ItemList({ items, onRemoveItem }) {
 }
 
 function Item({ item, removeItem }) {
+  const [hightlight, setHighlight] = useState(false);
+
+  function handleHighlight() {
+    setHighlight((e) => !e);
+  }
+
   if (item)
     return (
-      <div>
+      <div
+        onClick={handleHighlight}
+        style={{
+          backgroundColor: `${hightlight ? "lightgrey" : ""}`,
+          display: "inline-block",
+        }}
+      >
         <span style={{ marginRight: "10px" }}>{item?.count}</span>
         <span style={{ marginRight: "10px" }}>{item?.name}</span>
         <span
