@@ -43,3 +43,18 @@ but state 'itemlist' does not know which item is highlighted, If we want so,
 we should add property in parent state 'itemlist' and change onclick of component's div,
 using the component
 
+------
+State-project1.6
+We will move components into seperate files.
+
+create each file name as component and export 
+export can be of two types
+
+ - default export
+   export default function Component(){ . . }
+   to use:
+    import Component from './Component'
+ - named export
+    export function Component(){ . . .}
+    to use:
+     import { Component } from './Component'
