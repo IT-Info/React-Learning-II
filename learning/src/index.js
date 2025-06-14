@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { useState } from "react";
 import "./index.css";
+import { Header } from "./Header";
+import { Menu } from "./Menu";
+import { Toy } from "./Toy";
 
 function App() {
   // function Toy() {
@@ -12,102 +14,6 @@ function App() {
       <Header />
       <Menu />
     </>
-  );
-}
-
-const Header = () => {
-  // inline-css
-  return (
-    <h1 style={{ color: "red", fontFamily: "arial" }}>
-      Toy Shop Opened {new Date().toLocaleTimeString()}
-    </h1>
-  );
-};
-
-function createAlert() {
-  Toy({ toy: { name: "tt", price: "price", qty: 10 } });
-}
-
-function Toy({ toy }) {
-  const [highlight, setHighlight] = useState(false);
-  const [count, setCount] = useState(1);
-
-  function changeHighlight() {
-    setHighlight((s) => !s);
-    console.log(highlight);
-  }
-  function changeCount1() {
-    setCount(count + 1);
-    setCount(count + 1);
-  }
-
-  function changeCount2() {
-    setCount((c) => c + 1);
-    setCount((c) => c + 1);
-  }
-
-  console.log(toy);
-  const styles = {
-    fontSize: "20px",
-    fontFamily: "arial",
-    borderBottom: "1px solid black",
-    padding: "5px 0px",
-  };
-  return (
-    <div style={styles}>
-      <h3
-        style={{
-          color: `${highlight === true ? "Red" : "black"}`,
-        }}
-      >
-        {toy.name} - {count}
-      </h3>
-      <div>
-        <span>Price : {toy.price}, </span>
-        <span>Quantity : {toy.qty}</span>
-      </div>
-      <button
-        // execute on click of button
-        // onClick={() => {
-        //   createAlert();
-        // }}
-
-        // onClick={createAlert()} // immediately executed
-        onClick={createAlert}
-      >
-        click
-      </button>
-      <button onClick={changeHighlight}>Highlight</button>
-      <button onClick={changeCount2}>Add Count</button>
-    </div>
-  );
-}
-
-const toys = [
-  {
-    name: "Duck",
-    price: 100,
-    qty: 10,
-  },
-  {
-    name: "Train",
-    price: 2000,
-    qty: 5,
-  },
-];
-
-function Menu() {
-  if (toys.length === 0) {
-    return <h3>No Toys in store</h3>;
-  }
-  return (
-    <div className="menu">
-      {/* <Toy name="Duck" price="12" qty={12} />
-      <Toy name="Spiderman" price="120" qty={15} /> */}
-      {toys.map((toy) => (
-        <Toy key={toy.name} toy={toy} />
-      ))}
-    </div>
   );
 }
 

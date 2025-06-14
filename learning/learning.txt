@@ -476,4 +476,19 @@ NOTE:
    If the data that should not trigger component re-renders, don't use state.
  - State variable attached per component, is not shared.
 
- 
+---------------------------------------------
+ Step 11 
+ Seperate components in files, export them and use them using import.
+ create each file name as component and export Add commentMore actions
+
+ export can be of two types
+
+ - default export
+   export default function Component(){ . . }
+   to use:
+    import Component from './Component'
+ - named export
+    export function Component(){ . . .}
+    to use:
+     import { Component } from './Component'
+
