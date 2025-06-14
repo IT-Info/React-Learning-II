@@ -421,4 +421,17 @@ A. - add new state variable using useState(<initial value>);
    hook is only allowed to call in component function not anywhere else.
    e.g. not in function, not in loop, not in if
 
-Q. can we change state of a variable directly without using setStateHook
+Q. can we change state of a variable directly without using setState Hook
+A. No, you can not change state of a component, only change the variable's value.
+
+let [highlight, setHighlight] = useState(false);
+highlight = true;
+
+// UI change not triggered because react does not know if the value is changed or not.
+
+BUT
+let [test] = useState({name: "rahul"})
+test.name = "Babbar";
+then UI will updated, but this is not best practice & not recommended by react
+
+Q. Why this time react will know the changes and updates UI ?

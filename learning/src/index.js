@@ -31,9 +31,12 @@ function createAlert() {
 function Toy({ toy }) {
   const [highlight, setHighlight] = useState(false);
 
+  let [test] = useState({ name: "rahul" });
+
   function changeHighlight() {
     setHighlight(true);
     console.log(highlight);
+    test.name = "Babbar";
   }
 
   console.log(toy);
@@ -50,7 +53,7 @@ function Toy({ toy }) {
           color: `${highlight === true ? "Red" : "black"}`,
         }}
       >
-        {toy.name}
+        {toy.name} - {test.name}
       </h3>
       <div>
         <span>Price : {toy.price}, </span>
