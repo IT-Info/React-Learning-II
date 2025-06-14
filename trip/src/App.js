@@ -3,10 +3,12 @@ import { useState } from "react";
 
 const itemList = [
   {
+    id: 1,
     name: "item1",
     count: 1,
   },
   {
+    id: 2,
     name: "item2",
     count: 2,
   },
@@ -19,10 +21,15 @@ function App() {
     setItems((items) => [...items, item]);
   }
 
+  function onRemoveItem(id) {
+    console.log(id);
+    setItems((items) => [...items.filter((e) => e.id !== id)]);
+  }
+
   return (
     <div className="App">
       <Form onAddItem={onAddItem} />
-      <ItemList items={items} />
+      <ItemList items={items} onRemoveItem={onRemoveItem} />
     </div>
   );
 }
@@ -32,6 +39,7 @@ function Form({ onAddItem }) {
   const [description, setDescription] = useState("");
   function addItem() {
     let item = {
+      id: Math.random(),
       name: description,
       count: count,
     };
@@ -69,27 +77,28 @@ function Form({ onAddItem }) {
   );
 }
 
-function ItemList({ items }) {
+function ItemList({ items, onRemoveItem }) {
   return (
     items &&
     Array.isArray(items) &&
     items.length > 0 && (
       <div className="items">
         {items.map((e) => {
-          return <Item item={e} key={e.name} />;
+          return <Item item={e} key={e.id} removeItem={onRemoveItem} />;
         })}
       </div>
     )
   );
 }
 
-function Item({ item }) {
+function Item({ item, removeItem }) {
   if (item)
     return (
       <div>
         <span style={{ marginRight: "10px" }}>{item?.count}</span>
         <span style={{ marginRight: "10px" }}>{item?.name}</span>
         <span
+          onClick={() => removeItem(item.id)}
           style={{
             marginRight: "10px",
             display: "inline",

@@ -25,3 +25,12 @@ e.g. We lift up items array to the App component and on add button click
 calling function onAddItem which is passed through a prop in Form component.
 
 also pass items to ItemList component to render list items
+
+------
+State-project1.4
+
+We need to handle 'x' button so that element should remove in the list.
+
+Creating onRemoveItem and pass to ItemList then Pass to Item component.
+onClick of 'x' button function would call and pass its id to remove
+
