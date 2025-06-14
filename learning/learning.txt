@@ -408,4 +408,17 @@ Q. What it does ?
 - trigger's react to re-render the component 
 
 Q. How it works ?
+A. - add new state variable using useState(<initial value>);
+   - change state in eventHandler using setState(<value>);
 
+   const[highlight, setHighlight] = useState(false);
+   useState returns an array of [const value, function]
+
+   function used to update UI 
+   convention = set{Variable}
+
+   useState is hook, identified starts with 'use'
+   hook is only allowed to call in component function not anywhere else.
+   e.g. not in function, not in loop, not in if
+
+Q. can we change state of a variable directly without using setStateHook

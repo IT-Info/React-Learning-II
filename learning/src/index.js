@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { useState } from "react";
 import "./index.css";
 
 function App() {
@@ -28,6 +29,13 @@ function createAlert() {
 }
 
 function Toy({ toy }) {
+  const [highlight, setHighlight] = useState(false);
+
+  function changeHighlight() {
+    setHighlight(true);
+    console.log(highlight);
+  }
+
   console.log(toy);
   const styles = {
     fontSize: "20px",
@@ -37,7 +45,13 @@ function Toy({ toy }) {
   };
   return (
     <div style={styles}>
-      <h3>{toy.name}</h3>
+      <h3
+        style={{
+          color: `${highlight === true ? "Red" : "black"}`,
+        }}
+      >
+        {toy.name}
+      </h3>
       <div>
         <span>Price : {toy.price}, </span>
         <span>Quantity : {toy.qty}</span>
@@ -53,6 +67,7 @@ function Toy({ toy }) {
       >
         click
       </button>
+      <button onClick={changeHighlight}>Highlight</button>
     </div>
   );
 }
