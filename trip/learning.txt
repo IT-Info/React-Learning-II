@@ -1,0 +1,12 @@
+we should not use DOM directly, we should use state to control elements
+
+the elements should sync with state of component.
+so we created state descriptiona and count
+and attached with element, element start rendering the value of state variable
+but whenever we change the value of dropdown (count) it will not change on ui, because state not changed yet.
+
+if we add value={description} then error on console will be
+You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.
+
+we should change state on change so that element should also changed
+you can check console
