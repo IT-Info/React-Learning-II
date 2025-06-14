@@ -24,12 +24,21 @@ function App() {
 function Form() {
   const [count, setCount] = useState(2);
   const [description, setDescription] = useState("");
+  const [items, setItems] = useState([
+    {
+      name: "item1",
+      count: 1,
+    },
+  ]);
+
   function addItem() {
     let item = {
       name: description,
       count: count,
     };
-    console.log(item);
+    console.log(items);
+    setItems([...items, item]);
+    // setItems((e) => [...items, item]);
   }
 
   return (
@@ -58,17 +67,23 @@ function Form() {
       <span>
         <button onClick={addItem}>Add</button>
       </span>
+
+      {items.length > 0 && <ItemList items={items} />}
     </div>
   );
 }
 
-function ItemList() {
+function ItemList({ items }) {
   return (
-    <div className="items">
-      {itemList.map((e) => {
-        return <Item item={e} key={e.name} />;
-      })}
-    </div>
+    items &&
+    Array.isArray(items) &&
+    items.length > 0 && (
+      <div className="items">
+        {items.map((e) => {
+          return <Item item={e} key={e.name} />;
+        })}
+      </div>
+    )
   );
 }
 

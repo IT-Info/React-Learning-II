@@ -10,3 +10,12 @@ You provided a `value` prop to a form field without an `onChange` handler. This 
 
 we should change state on change so that element should also changed
 you can check console
+
+--- state-project 1.2
+Q. What is the difference b/w state & props
+A. state is internal data owned by component,
+props is external data owned by parent component.
+
+so we will pass list of items to the ItemList and ItemList then display the components on page.
+
+Q. But what if ItemList and Form component in parallel ?
