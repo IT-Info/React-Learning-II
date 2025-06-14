@@ -463,4 +463,9 @@ but we are calling twice setCount().
 Q. Why ?
 A. Actual state is not yet updated at the time second function calls.
 
+this is not the correct way of changing state,
+state should be update using callback function
+setState((c) => c + 1)
 
+if you will replace changeCount1 to changeCount2 in code then you will see the change
+value would get updated by +2

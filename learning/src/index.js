@@ -41,6 +41,11 @@ function Toy({ toy }) {
     setCount(count + 1);
   }
 
+  function changeCount2() {
+    setCount((c) => c + 1);
+    setCount((c) => c + 1);
+  }
+
   console.log(toy);
   const styles = {
     fontSize: "20px",
@@ -73,7 +78,7 @@ function Toy({ toy }) {
         click
       </button>
       <button onClick={changeHighlight}>Highlight</button>
-      <button onClick={changeCount1}>Add Count</button>
+      <button onClick={changeCount2}>Add Count</button>
     </div>
   );
 }
