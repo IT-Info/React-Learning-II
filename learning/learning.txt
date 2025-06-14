@@ -469,3 +469,11 @@ setState((c) => c + 1)
 
 if you will replace changeCount1 to changeCount2 in code then you will see the change
 value would get updated by +2
+
+NOTE: 
+ - State variables should only used when that variable is attached with UI.
+   or in other words
+   If the data that should not trigger component re-renders, don't use state.
+ - State variable attached per component, is not shared.
+
+ 
