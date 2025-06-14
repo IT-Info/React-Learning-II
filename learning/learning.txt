@@ -445,3 +445,22 @@ React calls the component function again and UI re-rendered.
 
 React Developer Tools
 Dev tools > components > you can see exact components defined in code and change their state
+
+------------------------
+65. Step 10.2
+Correct way to update state
+
+  function changeCount1() {
+    setCount(count + 1);
+    setCount(count + 1);
+  }
+
+  <button onClick={changeCount1}> Add Count </button>
+
+NOTE: if you will click on 'Add Count' button then in console you will see count will increament by 1
+but we are calling twice setCount().
+
+Q. Why ?
+A. Actual state is not yet updated at the time second function calls.
+
+

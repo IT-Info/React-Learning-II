@@ -30,13 +30,15 @@ function createAlert() {
 
 function Toy({ toy }) {
   const [highlight, setHighlight] = useState(false);
-
-  let [test] = useState({ name: "rahul" });
+  const [count, setCount] = useState(1);
 
   function changeHighlight() {
-    setHighlight(true);
+    setHighlight((s) => !s);
     console.log(highlight);
-    test.name = "Babbar";
+  }
+  function changeCount1() {
+    setCount(count + 1);
+    setCount(count + 1);
   }
 
   console.log(toy);
@@ -53,7 +55,7 @@ function Toy({ toy }) {
           color: `${highlight === true ? "Red" : "black"}`,
         }}
       >
-        {toy.name} - {test.name}
+        {toy.name} - {count}
       </h3>
       <div>
         <span>Price : {toy.price}, </span>
@@ -71,6 +73,7 @@ function Toy({ toy }) {
         click
       </button>
       <button onClick={changeHighlight}>Highlight</button>
+      <button onClick={changeCount1}>Add Count</button>
     </div>
   );
 }
