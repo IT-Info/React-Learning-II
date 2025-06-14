@@ -19,3 +19,9 @@ props is external data owned by parent component.
 so we will pass list of items to the ItemList and ItemList then display the components on page.
 
 Q. But what if ItemList and Form component in parallel ?
+A. We need to lift up the props so that props sharable between components.
+
+e.g. We lift up items array to the App component and on add button click 
+calling function onAddItem which is passed through a prop in Form component.
+
+also pass items to ItemList component to render list items
