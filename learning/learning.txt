@@ -492,3 +492,36 @@ NOTE:
     to use:
      import { Component } from './Component'
 
+---------------------------------------------
+ Step 12
+
+You can pass props in component, using these props, component can change behaviour 
+in other words we can configure the component based on props, but what if we want to send the content of that component as props, how can we send that
+Ans : Using 'children' prop
+
+ Component can get innerHTML as prop named 'children' in react.
+ Component can contain jsx <Component> {jsx} </Component>
+ {jsx} will be the part of props('children')
+
+ <Component>
+ hello
+ </Component>
+
+
+function Component({children}){
+  return <div>
+    {children}
+  </div>
+}
+
+The children prop allow us to pass JSX into an element (besides regular props)
+
+NOTE: 
+Used make reusable and configurable components (especially component content)
+Really useful for generic components that don’t know their content before being used (e.g. modal)
+
+
+
+
+
+
