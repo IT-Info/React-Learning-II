@@ -6,3 +6,15 @@ function Star({no, rating}){
   . . .  onClick = { () => { rating(no+1) } }  . . . 
 }
 
+
+star-rating-step2
+
+we can pass handler function also which has body what needs to be done on click
+
+<Star rating = { () => { setRating(no);}}
+
+function Star({no, clickHandler}){ 
+    
+  . . .  onClick = {clickHandler}  . . . 
+}
+

@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 export default function StarRating({ maxRating = 5 }) {
-  const [rating, setRating] = useState(1);
+  const [rating, setRating] = useState(0);
 
   return (
     <div>
       {Array.from({ length: maxRating }, (v, i) => (
-        <Star key={i} no={i + 1} rating={setRating} />
+        <Star key={i} onClick={() => setRating(i + 1)} />
       ))}
       <span style={{ marginLeft: "10px", fontSize: "30px" }}>{rating}</span>
     </div>
@@ -17,12 +17,10 @@ const starStyle = {
   letterSpacing: "40px",
 };
 
-function Star({ size = "40", no, rating }) {
+function Star({ size = "40", onClick, type }) {
   return (
     <svg
-      onClick={() => {
-        rating(no);
-      }}
+      onClick={onClick}
       style={{ ...starStyle, height: `${size}px` }}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
@@ -31,3 +29,7 @@ function Star({ size = "40", no, rating }) {
     </svg>
   );
 }
+
+/*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--></svg>
+*/
