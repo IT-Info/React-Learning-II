@@ -1,0 +1,8 @@
+in Star component we have sent 'no' and 'callbackFunction' (setRating) which
+needs to be call at the time of click star. 
+
+function Star({no, rating}){ 
+    
+  . . .  onClick = { () => { rating(no+1) } }  . . . 
+}
+
