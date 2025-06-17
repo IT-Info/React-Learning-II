@@ -18,3 +18,13 @@ function Star({no, clickHandler}){
   . . .  onClick = {clickHandler}  . . . 
 }
 
+-------------------
+star-rating-step3
+displaying solid stars on clck
+
+
+we have passed a type of star at the time of click, state changes and 
+and parent component re-rendered, because of that all child components are re-rendered
+at the time of re-rendering we passed type based on the state, 
+Component get that state and returned the star based on the type.
+
