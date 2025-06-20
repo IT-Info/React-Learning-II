@@ -25,6 +25,7 @@ function Star({ size = "40", onClick, type }) {
   return (
     <svg
       onClick={onClick}
+      onMouseEnter={onClick}
       style={{ ...starStyle, height: `${size}px` }}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 576 512"
