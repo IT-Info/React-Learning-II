@@ -4,6 +4,7 @@ import "./index.css";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
 import { Toy } from "./Toy";
+import Demo from "./Demo";
 
 function App() {
   // function Toy() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Header />
+      <Demo prop={"234"} />
       <Menu />
     </>
   );

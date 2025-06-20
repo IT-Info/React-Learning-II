@@ -520,8 +520,43 @@ NOTE:
 Used make reusable and configurable components (especially component content)
 Really useful for generic components that don’t know their content before being used (e.g. modal)
 
+----------------
 
+Step 13
 
+Thinking in React: Components, Composition and Reusability
+
+Create big components are break it as and when needed.
+also prop-drilling used to build UI if too many props are there then it's too difficult
+to manage if new prop is required. 
+ You should use 'children' and pass the component
+ also you can pass elements as props inside components
+<Component prop={<h1>2</h1>} />
+
+you can create reusable compoennts by passing props as eventHandlers, elements, values
+NOTE: you can not identify the type required by component, by mistake you can pass string but required integer
+solution:
+
+ - PropTypes - 
+
+Import PropTypes from “prop-types”;
+Component.propTypes = {
+  prop1: PropTypes.number
+}
+function Component( { prop1 } ){
+   return <h1> {prop1} </h1>
+}
+--------------
+ - To Use - 
+--------------
+<Component prop1=”5” />
+--------------
+
+Warning on console:
+Warning: Failed prop type: Invalid prop ‘prop1’ of type ‘string’ supplied to ‘Component’ expected ‘number’. 
+  at . . .
+
+--for me it's not working
 
 
 
