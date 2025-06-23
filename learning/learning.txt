@@ -564,3 +564,34 @@ step 14 internals of react
 
 
 
+-------------------------
+Step 15 :
+
+Component lifecycle phases
+Mounted : initial-rendring, fresh state & props created
+Re-Rendendered: when state changes, props changes, parent re-renders, context changes
+Unmounted: component instance is destroyed or removed, state props are destroyed.
+
+We can hook between different phases of lifecycle
+We can define code to be executed at specific points in time.
+We can use with the help of useEffect hook.
+
+Scenario: 
+What if We fetch data and setState inside component ?
+
+Function Component(){
+	Const [data,setData] = useState(“abc”);
+	fetchData
+	setData(...);
+
+	return <h1> displayData</h1>;
+}
+// setData inside a component triggers re-rendering
+This will cause an infinite loop of rendering
+
+ERROR : Too many re-renders
+
+NOTE: 'Header.js', if uncomment line 6 then error will come
+
+But we want to set state here, without any problem (re-rendering,..)
+Solution: useEffect() hook
