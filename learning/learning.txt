@@ -558,5 +558,9 @@ Warning: Failed prop type: Invalid prop ‘prop1’ of type ‘string’ supplie
 
 --for me it's not working
 
+--
+step 14 internals of react
+
+
 
 
