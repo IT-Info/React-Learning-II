@@ -610,3 +610,20 @@ useEffect(callback, conditionOfCallbackExecution)
 [] = execute callback only after component first Mount(rendered).
 
 
+-------------------------
+Step 15.3 : how useEffect is different from eventHandlers
+
+eventHandlers : executed when event occur, click, hover, focus.
+useEffect: executed when component, mount(this is also an event of a component);
+           and after subsequent re-renders (according to dependency array)
+
+callback should return a cleaup function 
+which will call before re-renders or unmounts
+
+NOTE: In thinking we are using effect to component syncronized with some external system.
+
+eventHandlers are prefered way to change state of component.
+whenever possible we should never overuse of useEffect.
+
+
+
