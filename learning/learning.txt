@@ -595,3 +595,18 @@ NOTE: 'Header.js', if uncomment line 6 then error will come
 
 But we want to set state here, without any problem (re-rendering,..)
 Solution: useEffect() hook
+
+-------------------------
+Step 15.2 :
+
+Now you can check line setA(....) inside useEffect callback
+
+useEffect(()=>{
+  setA(...); 
+},[]);
+
+useEffect(callback, conditionOfCallbackExecution)
+
+[] = execute callback only after component first Mount(rendered).
+
+
