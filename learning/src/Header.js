@@ -6,7 +6,15 @@ export const Header = () => {
   const [a, setA] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
-    setA(new Date().toLocaleTimeString());
+    async function setDate() {
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 3000);
+      });
+      setA(new Date().toLocaleTimeString());
+    }
+    setDate();
   }, []);
 
   return (

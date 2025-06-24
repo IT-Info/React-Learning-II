@@ -626,4 +626,34 @@ eventHandlers are prefered way to change state of component.
 whenever possible we should never overuse of useEffect.
 
 
+-------------------------
+Step 15.4 : useEffect callback understanding
+
+if you run callback asyncronous then you will add 'async' before callback,
+
+useEffect(async ()=>{ 
+  ... 
+},[]);
+
+Warning by eslint : 
+Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
+
+This is because callback run syncronously, and the caller does not use 'await' 
+if you want to run function asyncronously you should declare function inside callback and run that asyncronously.
+
+useEffect(()=>{ 
+  async function fetchData(){
+    const response = await call();
+    const data = await response.data;
+    setState(data);
+    console.log(data);
+  }
+  fetchData();
+  ... 
+},[]);
+
+In Header.js, after 3 seconds 'setA' will be called
+
+NOTE: You can try to display loader, after 3 seconds time should be visible.
+
 
