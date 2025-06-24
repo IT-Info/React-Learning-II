@@ -657,3 +657,33 @@ In Header.js, after 3 seconds 'setA' will be called
 NOTE: You can try to display loader, after 3 seconds time should be visible.
 
 
+-------------------------
+useEffect Dependency Array
+
+an affect is run after each and every render
+but we can restrict by passing dependency array in second argument of useEffect.
+
+why dependency array required ?
+React doesn't know when to run useEffect, 
+each time one of the dependencies changes, the effect will executed again.
+
+dependies are 'state variables' or 'props'
+Every state variable and prop used inside the effect MUST be included in the dependency array.
+otherwise we get a 'stale closure' we will understand more later..
+
+useEffect is an event listener for dependencies, whenever a dependency changes, it will execute effect(function) again.
+Effects react to updates to state and props and used inside the effect (the dependencies). so effects are 'reactive' (like state updates re-rendering the UI)
+
+                            SYNCHRONIZATION                     LIFECYCLE
+useEffect(fn, [x,y])  effects syncronizes with x,y          Runs on mount and re-renders triggered by updating x,y
+useEffect(fn, [])     effects no state/props                Runs only mount (initial render)
+useEffects(fn)        effects syncronizes with everything   Run on every render (usually bad)
+
+WHEN are effects executed ?
+mount (initial render)
+commit
+browser paint
+effect - > 
+
+if an effect may contain code which takes time to execute then block all the process.
+
