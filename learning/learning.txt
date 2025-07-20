@@ -687,3 +687,24 @@ effect - >
 
 if an effect may contain code which takes time to execute then block all the process.
 
+-------------------------
+Step15.5 : useEffect cleanup function
+
+function that we can return from an effect (optional)
+
+useEffect(()=>{ 
+  ...
+  return () =>{ console.log("cleanup"); } // cleanup function
+},[]);
+
+Runs on two different occasions:
+- Before the effect is executed again.
+- After a component has unmounted
+
+This function is used to unregister events, cleanup task, stop timer
+NOTE: 
+Each effect should do only one thing! use one useEffect hook for each side effect.
+This makes effects easier to clean up.
+
+
+
